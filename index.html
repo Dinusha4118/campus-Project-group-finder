@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroupFinder - Find Your Project Team</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/ULOGO.png" alt="GroupFinder Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="groups.html">Groups</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="login.html" class="btn btn-primary">Login</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your Perfect Project Team</h1>
+                <p>Connect with fellow students who share your academic interests and skills to collaborate on projects.</p>
+                <div class="hero-buttons">
+                    <a href="login.html" class="btn btn-primary">Get Started</a>
+                    <a href="groups.html" class="btn btn-secondary">Browse Groups</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero1.png" alt="Students collaborating">
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose Uniconnect?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Smart Matching</h3>
+                    <p>Our algorithm suggests groups based on your skills, interests, and department.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Real-time Updates</h3>
+                    <p>Get instant notifications when new groups form or when members join.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your group's progress with built-in project management tools.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Integrated Chat</h3>
+                    <p>Communicate with your team members through our messaging system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create Your Profile</h3>
+                    <p>Register with your academic details and skills.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Find or Create a Group</h3>
+                    <p>Browse existing groups or start your own.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Collaborate</h3>
+                    <p>Work together using our collaboration tools.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Submit & Review</h3>
+                    <p>Complete your project and get feedback.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Students Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"GroupFinder helped me find the perfect team for my capstone project. We got an A!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://c.superprof.com/i/a/26963276/12067844/600/20230624052144/delhi-university-graduate-also-doing-fashion-communication-teach-english-from-class.jpg" alt="Sarah J.">
+                        <div>
+                            <h4>Saduni Chamathka.</h4>
+                            <span>Software Engineering, 2023 intake</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"I was new to campus and didn't know anyone. GroupFinder connected me with amazing teammates."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://thumbs.dreamstime.com/b/indian-college-student-working-laptop-28076028.jpg" alt="Michael T.">
+                        <div>
+                            <h4>Chathura Rajapaksha.</h4>
+                            <span>Information Technology, 2025 intake</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo">
+                        <img src="images/ULOGO.png" alt="GroupFinder Logo">
+                        
+                    </a>
+                    <p>Helping students connect and collaborate since 2025.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="groups.html">Groups</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> dinushadeshan4@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> (+94) 75 561 6887</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Chamara Uyana Road,Miriswaththa,Gampaha</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 UniConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

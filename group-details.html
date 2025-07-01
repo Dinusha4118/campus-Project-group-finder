@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Details | GroupFinder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Firebase SDK -->
+  
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+           <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <img src="images/ULOGO.png" alt="GroupFinder Logo">
+                    
+                </a>
+            </div>
+            
+             <div class="user-profile">
+               
+                <div class="user-info">
+                    <h4 id="user-profile-name">Loading...</h4>
+                    <span id="user-profile-info"></span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="groups.html" class="active">
+                            <i class="fas fa-users"></i>
+                            <span>Groups</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Schedule</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-tasks"></i>
+                            <span>Tasks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="btn btn-logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2>Group Details</h2>
+                </div>
+                <div class="header-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="group-details-content">
+                <div class="group-info-section">
+                    <div class="group-header">
+                        
+                        <div class="group-meta">
+                            <h1 id="group-name">Group Name</h1>
+                            <h3 id="group-topic">Project Topic</h3>
+                            <p id="group-description">Group description goes here...</p>
+                            <div class="group-stats">
+                                <span id="group-department">Department</span>
+                                <div class="skill-tags" id="group-skills">
+                                    <!-- Skills will be added here -->
+                                </div>
+                            </div>
+                            <div class="group-actions">
+                                <button id="edit-group-btn" class="btn btn-outline edit-btn">
+                                <i class="fas fa-edit"></i> Edit
+                                </button>
+                                <button id="delete-group-btn" class="btn btn-danger delete-btn">
+                                 <i class="fas fa-trash-alt"></i> Delete
+                                </button>
+                            </div>
+
+                            <button id="join-leave-btn" class="btn btn-primary">Join Group</button>
+                        </div>
+                    </div>
+                    
+                    <div class="group-members-section">
+                        <h3>Members</h3>
+                        <div class="members-grid" id="group-members">
+                            <!-- Members will be added here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group-activity-section">
+                    <div class="group-chat">
+                        <h3>Group Chat</h3>
+                        <div class="messages-container" id="messages-container">
+                            <!-- Messages will be added here -->
+                        </div>
+                        <form class="message-form" id="message-form">
+                            <input type="text" placeholder="Type your message..." id="message-input" required>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="group-tasks">
+                        <h3>Tasks</h3>
+                        <form class="task-form" id="task-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Task title" id="task-title" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Description" id="task-description"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="task-due-date">Due Date</label>
+                                <input type="date" id="task-due-date">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Task</button>
+                        </form>
+                        
+                        <div class="tasks-list" id="tasks-list">
+                            <!-- Tasks will be added here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/group-details.js"></script>
+     <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

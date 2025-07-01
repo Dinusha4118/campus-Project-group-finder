@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages | GroupFinder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <img src="images/ULOGO.png" alt="GroupFinder Logo">
+                </a>
+            </div>
+            <div class="user-profile">
+                <div class="user-info">
+                    <h4 id="user-profile-name">Loading...</h4>
+                    <span id="user-profile-info"></span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+                    <li><a href="groups.html"><i class="fas fa-users"></i><span>Groups</span></a></li>
+                    <li><a href="messages.html" class="active"><i class="fas fa-envelope"></i><span>Messages</span><span class="badge">3</span></a></li>
+                    <li><a href="schedule.html"><i class="fas fa-calendar-alt"></i><span>Schedule</span></a></li>
+                    <li><a href="tasks.html"><i class="fas fa-tasks"></i><span>Tasks</span></a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+                    <h2>Messages</h2>
+                </div>
+                <div class="header-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search messages...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="messages-layout">
+                <div class="conversations-list">
+                    <div class="conversation-item active">
+                        <div class="group-avatar"><img src="https://via.placeholder.com/50" alt="Group Avatar"></div>
+                        <div class="conversation-info">
+                            <h5>Advanced AI Research</h5>
+                            <p>You: Sure, I will get it done...</p>
+                        </div>
+                        <div class="conversation-meta">
+                            <span class="timestamp">10:45 AM</span>
+                            <span class="badge">2</span>
+                        </div>
+                    </div>
+                    <div class="conversation-item">
+                        <div class="group-avatar"><img src="https://via.placeholder.com/50" alt="Group Avatar"></div>
+                        <div class="conversation-info">
+                            <h5>Web Development Project</h5>
+                            <p>Lisa: Can you check the new design?</p>
+                        </div>
+                        <div class="conversation-meta">
+                            <span class="timestamp">Yesterday</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-panel">
+                    <div class="chat-header">
+                        <h3>Advanced AI Research</h3>
+                    </div>
+                    <div class="messages-container" id="messages-container">
+                        </div>
+                    <form class="message-form" id="message-form">
+                        <input type="text" placeholder="Type your message..." id="message-input" required>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/messages.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

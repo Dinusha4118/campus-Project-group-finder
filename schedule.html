@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule | GroupFinder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo"><img src="images/ULOGO.png" alt="GroupFinder Logo"></a>
+            </div>
+            <div class="user-profile">
+                <div class="user-info">
+                    <h4 id="user-profile-name">Loading...</h4>
+                    <span id="user-profile-info"></span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+                    <li><a href="groups.html"><i class="fas fa-users"></i><span>Groups</span></a></li>
+                    <li><a href="messages.html"><i class="fas fa-envelope"></i><span>Messages</span><span class="badge">3</span></a></li>
+                    <li><a href="schedule.html" class="active"><i class="fas fa-calendar-alt"></i><span>Schedule</span></a></li>
+                    <li><a href="tasks.html"><i class="fas fa-tasks"></i><span>Tasks</span></a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h2>Schedule</h2>
+            </header>
+
+            <div class="schedule-content">
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button id="prevMonthBtn"><i class="fas fa-chevron-left"></i></button>
+                        <h3 id="currentMonthYear">June 2024</h3>
+                        <button id="nextMonthBtn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-grid" id="calendarGrid">
+                        </div>
+                </div>
+                <div class="schedule-details">
+                    <h3>Upcoming Events</h3>
+                    <div id="event-list">
+                        </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/schedule.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

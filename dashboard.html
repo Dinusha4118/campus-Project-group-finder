@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | GroupFinder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <img src="images/ULOGO.png" alt="GroupFinder Logo">
+                  
+                </a>
+            </div>
+            
+             <div class="user-profile">
+            
+                <div class="user-info">
+                    <h4 id="user-profile-name">Loading...</h4>
+                    <span id="user-profile-info"></span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html" class="active">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="groups.html">
+                            <i class="fas fa-users"></i>
+                            <span>Groups</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="messages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Schedule</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-tasks"></i>
+                            <span>Tasks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="btn btn-logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2>Dashboard</h2>
+                </div>
+                <div class="header-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="dashboard-content">
+                <div class="welcome-banner">
+                    <div class="welcome-content">
+                        <h3>Welcome back,</h3>
+                        <p>You have 2 active groups and 3 pending invitations.</p>
+                        <a href="groups.html" class="btn btn-primary">View Groups</a>
+                    </div>
+                    <div class="welcome-image">
+                        <img src="images/hero.jpeg" alt="Collaboration">
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h4>My Groups</h4>
+                            <a href="groups.html" class="btn-link">View All</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="group-list">
+                                <div class="group-item">
+                                    <div class="group-info">
+                                        <h5>Advanced AI Research</h5>
+                                        <p>Computer Science • 4/6 members</p>
+                                    </div>
+                                    <div class="group-status">
+                                        <span class="badge badge-active">Active</span>
+                                    </div>
+                                </div>
+                                <div class="group-item">
+                                    <div class="group-avatar">
+                                        <img src="https://via.placeholder.com/50" alt="Group Avatar">
+                                    </div>
+                                    <div class="group-info">
+                                        <h5>Web Development Project</h5>
+                                        <p>Software Engineering • 3/5 members</p>
+                                    </div>
+                                    <div class="group-status">
+                                        <span class="badge badge-active">Active</span>
+                                    </div>
+                                </div>
+                                <div class="group-item">
+                                    <div class="group-avatar">
+                                        <img src="https://via.placeholder.com/50" alt="Group Avatar">
+                                    </div>
+                                    <div class="group-info">
+                                        <h5>Data Science Competition</h5>
+                                        <p>Computer Science • Pending</p>
+                                    </div>
+                                    <div class="group-status">
+                                        <span class="badge badge-pending">Pending</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h4>Upcoming Deadlines</h4>
+                            <a href="#" class="btn-link">View Calendar</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="deadline-list">
+                                <div class="deadline-item">
+                                    <div class="deadline-date">
+                                        <span class="day">15</span>
+                                        <span class="month">Jun</span>
+                                    </div>
+                                    <div class="deadline-info">
+                                        <h5>AI Research Proposal</h5>
+                                        <p>Advanced AI Research Group</p>
+                                    </div>
+                                    <div class="deadline-actions">
+                                        <span class="badge badge-urgent">Urgent</span>
+                                    </div>
+                                </div>
+                                <div class="deadline-item">
+                                    <div class="deadline-date">
+                                        <span class="day">22</span>
+                                        <span class="month">Jun</span>
+                                    </div>
+                                    <div class="deadline-info">
+                                        <h5>Web App Prototype</h5>
+                                        <p>Web Development Project</p>
+                                    </div>
+                                    <div class="deadline-actions">
+                                        <span class="badge badge-warning">Due Soon</span>
+                                    </div>
+                                </div>
+                                <div class="deadline-item">
+                                    <div class="deadline-date">
+                                        <span class="day">30</span>
+                                        <span class="month">Jun</span>
+                                    </div>
+                                    <div class="deadline-info">
+                                        <h5>Data Analysis Report</h5>
+                                        <p>Data Science Competition</p>
+                                    </div>
+                                    <div class="deadline-actions">
+                                        <span class="badge">Upcoming</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h4>Group Recommendations</h4>
+                            <a href="groups.html" class="btn-link">Browse All</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="recommendation-list">
+                                <div class="recommendation-item">
+                                    <div class="recommendation-avatar">
+                                        <img src="https://png.pngtree.com/png-clipart/20191121/original/pngtree-group-icon-png-image_5097424.jpg" alt="Group Avatar">
+                                    </div>
+                                    <div class="recommendation-info">
+                                        <h5>Machine Learning Study</h5>
+                                        <p>Computer Science • 3/5 members</p>
+                                        <div class="skill-tags">
+                                            <span>Python</span>
+                                            <span>TensorFlow</span>
+                                            <span>Data Analysis</span>
+                                        </div>
+                                    </div>
+                                    <div class="recommendation-actions">
+                                        <button class="btn btn-sm btn-primary">Join</button>
+                                    </div>
+                                </div>
+                                <div class="recommendation-item">
+                                    <div class="recommendation-avatar">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/6543/6543835.png" alt="Group Avatar">
+                                    </div>
+                                    <div class="recommendation-info">
+                                        <h5>Mobile App Development</h5>
+                                        <p>Software Engineering • 2/4 members</p>
+                                        <div class="skill-tags">
+                                            <span>React Native</span>
+                                            <span>JavaScript</span>
+                                            <span>UI/UX</span>
+                                        </div>
+                                    </div>
+                                    <div class="recommendation-actions">
+                                        <button class="btn btn-sm btn-primary">Join</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h4>Recent Activity</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-comment"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p><strong>Sarah</strong> commented on <strong>AI Research Proposal</strong></p>
+                                        <span class="activity-time">2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p><strong>Michael</strong> joined <strong>Web Development Project</strong></p>
+                                        <span class="activity-time">1 day ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>New task assigned: <strong>Design homepage layout</strong></p>
+                                        <span class="activity-time">2 days ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+     
+    <!-- At the end of the body -->
+     <script type="module">
+       import { auth } from './firebase.js';
+       import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js";
+
+      onAuthStateChanged(auth, (user) => {
+         if (!user) {
+           window.location.href = 'login.html';
+         }
+       });
+     </script>
+
+     <script type="module" src="js/firebase.js"></script>
+     <script type="module" src="js/dashboard.js"></script>
+      <script type="module" src="js/auth.js"></script>
+     <script src="js/script.js"></script>
+</body>
+</html>
